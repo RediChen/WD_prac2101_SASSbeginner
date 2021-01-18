@@ -1,0 +1,35 @@
+$myBlue : skyblue
+@import url('https://fonts.googleapis.com/css3?family=Noto+Sans+TC:wght@200;300;400;500;600;700;800;900&display=swap');
+@mixin ttStyle
+    margin: 20px
+    color : $myBlue
+    font-family: 'Noto Sans TC'
+    &:hover
+        font-size: 40px
+        margin: 10px
+
+*
+    margin: 0
+    padding: 0
+h1
+    // 只要輸入名字就能自動附上@include
+    @include ttStyle
+h2
+    @include ttStyle
+    transition: .5s
+    margin-bottom: 30px
+ul
+    padding: 20px
+    width: 50%
+    background-color: darkseagreen
+    list-style: none
+
+    li
+        padding: 20px 35px
+        background-color: lightseagreen
+
+
+@for $i from 1 through 5
+#no#$i
+    font-size: 8px+5*$i
+
